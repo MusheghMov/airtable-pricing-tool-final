@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="airtable-pricing-calculator-container">
+    <h1 class="title">Airtable Pricing Tool</h1>
+    <div class="questions-wrapper">
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How many users will need access to your database?
+            </p>
+            <div class="user-number-input-wrapper">
+                <label for="freePlanForQuestion0">Enter a number</label>
+                <input type="number" min="1" required name="question-0" id="freePlanForQuestion0"/>
+                <span class="number-input-error-message"></span>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How many different records will you need to keep in your largest database?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-1" id="freePlanForQuestion1" class="free"/>
+                <label for="freePlanForQuestion1">&lt 1,200</label>
+
+                <input type="radio" name="question-1" id="plusPlanForQuestion1" class="plus"/>
+                <label for="plusPlanForQuestion1">1,201 - 5,000</label>
+
+                <input type="radio" name="question-1" id="proPlanForQuestion1" class="pro"/>
+                <label for="proPlanForQuestion1">5,001 - 50,000</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How much attachment space will you require in your largest database?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-2" id="freePlanForQuestion2" class="free"/>
+                <label for="freePlanForQuestion2">&lt 2GB</label>
+
+                <input type="radio" name="question-2" id="plusPlanForQuestion2" class="plus"/>
+                <label for="plusPlanForQuestion2">2GB - 5GB</label>
+
+                <input type="radio" name="question-2" id="proPlanForQuestion2" class="pro"/>
+                <label for="proPlanForQuestion2">5GB - 20GB</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How long do you require revision history to be available?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-3" id="freePlanForQuestion3" class="free"/>
+                <label for="freePlanForQuestion3">Up to 2 weeks</label>
+
+                <input type="radio" name="question-3" id="plusPlanForQuestion3" class="plus"/>
+                <label for="plusPlanForQuestion3">Up to 6 months</label>
+
+                <input type="radio" name="question-3" id="proPlanForQuestion3" class="pro"/>
+                <label for="proPlanForQuestion3">Up to 1 year</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How many modular apps do you need to power up your base?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-4" id="freePlanForQuestion4" class="free"/>
+                <label for="freePlanForQuestion4">1 per base</label>
+
+                <input type="radio" name="question-4" id="plusPlanForQuestion4" class="plus"/>
+                <label for="plusPlanForQuestion4">3 per base</label>
+
+                <input type="radio" name="question-4" id="proPlanForQuestion4" class="pro"/>
+                <label for="proPlanForQuestion4">10 per base</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                You can create automated workflowes between your favorite apps and services.
+                <br> How many runs per month do you need?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-5" id="freePlanForQuestion5" class="free"/>
+                <label for="freePlanForQuestion5">100</label>
+
+                <input type="radio" name="question-5" id="plusPlanForQuestion5" class="plus"/>
+                <label for="plusPlanForQuestion5">5000</label>
+
+                <input type="radio" name="question-5" id="proPlanForQuestion5" class="pro"/>
+                <label for="proPlanForQuestion5">50000</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How long do you require automation runs history to be available?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-6" id="freePlanForQuestion6" class="free"/>
+                <label for="freePlanForQuestion6">Up to 2 weeks</label>
+
+                <input type="radio" name="question-6" id="plusPlanForQuestion6" class="plus"/>
+                <label for="plusPlanForQuestion6">Up to 6 months</label>
+
+                <input type="radio" name="question-6" id="proPlanForQuestion6" class="pro"/>
+                <label for="proPlanForQuestion6">Up to 1 year</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How many synced tables per base do you need?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-7" id="freePlanForQuestion7" class="free"/>
+                <label for="freePlanForQuestion7">1 per base</label>
+
+                <input type="radio" name="question-7" id="proPlanForQuestion7" class="pro"/>
+                <label for="proPlanForQuestion7">10 per base</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                How many sync integrations do you need?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-8" id="freePlanForQuestion8" class="free"/>
+                <label for="freePlanForQuestion8">1</label>
+
+                <input type="radio" name="question-8" id="plusPlanForQuestion8" class="plus"/>
+                <label for="plusPlanForQuestion8">3</label>
+
+                <input type="radio" name="question-8" id="proPlanForQuestion8" class="pro"/>
+                <label for="proPlanForQuestion8">7</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                Special discounts may apply based on your organization type. Select your organization type
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-9" id="freePlanForQuestion9"
+                       class="nonProfitOrEducationOrganization"/>
+                <label for="freePlanForQuestion9">Non-Profit or Education</label>
+
+                <input type="radio" name="question-9" id="proPlanForQuestion9"/>
+                <label for="proPlanForQuestion9">Other</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                Note that Airtable offers a discount when customers pay annually. Will you pay annually or monthly?
+            </p>
+            <span class="radio-button-error-message"></span>
+            <div class="answers-toggle">
+                <input type="radio" name="question-10" id="freePlanForQuestion10" class="annually"/>
+                <label for="freePlanForQuestion10">Annually</label>
+
+                <input type="radio" name="question-10" id="plusPlanForQuestion10" class="monthly"/>
+                <label for="plusPlanForQuestion10">Monthly</label>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                Which 'Advanced Features' do you require?
+            </p>
+            <div class="feature-Options-wrapper">
+                <div>
+                    <input type="checkbox" name="feature" id="feature1" class="pro"/>
+                    <label for="feature1">Gantt view</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature2" class="pro"/>
+                    <label for="feature2">Timeline view</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature3" class="pro"/>
+                    <label for="feature3">Personal and locked views</label>
+
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature4" class="pro"/>
+                    <label for="feature4">Sections</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature5" class="pro"/>
+                    <label for="feature5">Jira Cloud</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature6" class="plus"/>
+                    <label for="feature6">Custom branded forms</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature7" class="pro"/>
+                    <label for="feature7">Expanded color and formatting options</label>
+
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature8" class="pro"/>
+                    <label for="feature8">Advanced calendar features</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature9" class="plus"/>
+                    <label for="feature9">Automatic sync</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature10" class="pro"/>
+                    <label for="feature10">Multi-source syncing</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature11" class="pro"/>
+                    <label for="feature11">Password and domain restricted shares</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature12" class="pro"/>
+                    <label for="feature12">Field and table editing permissions</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="feature" id="feature13" class="pro"/>
+                    <label for="feature13">Early access to new features</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-wrapper">
+            <p class="question-text">
+                Enter the address where you wish to receive your estimate
+            </p>
+            <div class="user-number-input-wrapper">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required/>
+                <span class="input-error-message"></span>
+            </div>
+        </div>
+
+        <button class="softr-btn" id="getResultButton">
+            Calculate
+        </button>
+    </div>
+
+</div>
+
+<script src="./assets/scripts/main.js"></script>
+</body>
+
+</html>

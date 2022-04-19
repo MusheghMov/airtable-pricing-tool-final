@@ -1,0 +1,245 @@
+$softrMainColor: #FFB30B;
+$activeShadow: 0 0 10px rgba($softrMainColor, .5);
+
+@mixin hideInput {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .airtable-pricing-calculator-container {
+    font-family: Inter, serif;
+    font-style: normal;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 44px 26px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 3px 16px rgba(40, 25, 45, 0.08);
+
+
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      color: #242239;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .questions-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+
+      .question-wrapper {
+        margin-bottom: 2rem;
+
+        .user-number-input-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font-size: 11px;
+            margin-bottom: 8px;
+          }
+
+          input {
+            border: solid 1px #DDD;
+            border-radius: 6px;
+            margin: 0;
+            padding: 10px 12px;
+            box-sizing: border-box;
+            height: 42px;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+
+            &:hover {
+              border-color: $softrMainColor;
+            }
+
+            &:focus {
+              outline: none;
+              border-color: $softrMainColor;
+            }
+          }
+
+          .number-input-error-message {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 3px;
+            font-size: 12px;
+            color: #353535;
+
+            i {
+              margin-right: 6px;
+              color: red;
+            }
+
+          }
+        }
+
+        .question-text {
+          font-size: 13px;
+          margin: 12px 0;
+          text-align: center;
+          white-space: inherit;
+        }
+
+        .answers-toggle {
+          display: flex;
+          justify-content: center;
+
+          input {
+            @include hideInput;
+          }
+
+          input + label {
+            min-width: 80px;
+            max-width: 200px;
+            width: 100%;
+            cursor: pointer;
+            margin: 0;
+            padding: 6px;
+            box-sizing: border-box;
+            height: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px #DDD;
+            background-color: #FFF;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+            transition: border-color .15s ease-out, color .25s ease-out, background-color .15s ease-out, box-shadow .15s ease-out;
+
+            @media (max-width: 800px) {
+              font-size: 11px;
+            }
+
+            &:first-of-type {
+              border-radius: 6px 0 0 6px;
+            }
+
+            &:last-of-type {
+              border-radius: 0 6px 6px 0;
+            }
+          }
+
+          input:hover + label {
+            border-color: $softrMainColor;
+          }
+
+          input:checked + label {
+            background-color: $softrMainColor;
+            color: #FFF;
+            box-shadow: $activeShadow;
+            border-color: $softrMainColor;
+            z-index: 1;
+          }
+        }
+
+        .radio-button-error-message {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 6px;
+          font-size: 11px;
+          color: #353535;
+
+          i {
+            margin-right: 6px;
+            color: red;
+          }
+        }
+
+        .feature-Options-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 10px 2rem;
+          grid-template-areas: ". .";
+          justify-content: space-around;
+          margin-top: 20px;
+          margin-bottom: 24px;
+          min-width: 300px;
+
+
+          div {
+            display: flex;
+            align-items: center;
+            min-width: 300px;
+
+
+            input {
+              flex: 1;
+              width: 16px;
+              height: 16px;
+            }
+
+            label {
+              flex: 5;
+              font-size: 13px;
+              margin: 0;
+            }
+          }
+
+          @media (max-width: 1100px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: ".";
+          }
+        }
+      }
+
+      .input-error-message {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 3px;
+        font-size: 11px;
+        color: #353535;
+
+        i {
+          margin-right: 6px;
+          color: red;
+        }
+      }
+
+      .softr-btn {
+        background-color: $softrMainColor;
+        color: #2a182e;
+        padding: 12px 30px;
+        border-radius: 0.5rem;
+        line-height: 1.5;
+        font-weight: 600;
+        font-family: "Inter", serif;
+        font-size: 13px;
+        cursor: pointer;
+        border-width: 0;
+      }
+    }
+  }
+}
+
+
+
+
